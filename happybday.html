@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Card</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      width: 430px;
+      height: 290px;
+      padding:30px;
+      background: #f39ae5;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* floating dots */
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(
+        rgba(255,255,255,0.4) 2px,
+        transparent 2px
+      );
+      background-size: 25px 25px;
+    }
+
+    .cake {
+      margin-top: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cake-base {
+      width: 150px;
+      height: 80px;
+      background: #8b5a2b;
+      margin: auto;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .icing {
+      position: absolute;
+      top: -15px;
+      width: 100%;
+      height: 30px;
+      background: #e460d0;
+      border-radius: 8px 8px 10px 10px;
+    }
+
+    .icing::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 12px;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 10px,
+        rgba(0,0,0,0.05) 10px,
+        rgba(0,0,0,0.05) 20px
+      );
+      bottom: 0;
+    }
+
+    .candle {
+      width: 15px;
+      height: 50px;
+      background: #fff;
+      margin: auto;
+      position: relative;
+      top: -15px;
+    }
+
+    .flame {
+      width: 20px;
+      height: 25px;
+      background: gold;
+      border-radius: 60%;
+      position: absolute;
+      top: -15px;
+      left: -2px;
+      box-shadow: 0 5px 10px gold;
+      animation: flicker 1s infinite alternate;
+    }
+
+    @keyframes flicker {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+
+     .text {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: x-large;
+  font-weight: bold;
+  margin: 20px;
+  
+  border-right: 3px solid #520421;
+  animation: typing 3s steps(20) forwards,  0.6s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="cake">
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+      <div class="cake-base">
+        <div class="icing"></div>
+      </div>
+    </div>
+
+    <div class="text">Happy Birthday my Dear bro!</div>
+  </div>
+
+</body>
+</html>

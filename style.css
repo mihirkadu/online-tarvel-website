@@ -1,0 +1,30 @@
+/* navbar log hover info  */
+
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* hidden by default */
+#aboutBox {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: lightgreen;
+    padding: 10px;
+    width: 240px;
+    border-radius: 6px;
+    z-index: 99999;
+}
+
+/* THIS is what makes hover work */
+/* .logo-wrapper:hover #aboutBox {
+    display: block;
+} */
+
+.navbar {
+    background-color: #0dcaf0 !important;
+    z-index: 1050;
+}
+
